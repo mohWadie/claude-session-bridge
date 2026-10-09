@@ -1,0 +1,27 @@
+name: release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package the skill
+        run: |
+          mkdir -p dist
+          cd plugins/session-bridge/skills
+          zip -r ../../../dist/session-bridge.zip session-bridge
+          cp ../../../dist/session-bridge.zip ../../../dist/session-bridge.skill
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/session-bridge.zip
+            dist/session-bridge.skill
+          generate_release_notes: true

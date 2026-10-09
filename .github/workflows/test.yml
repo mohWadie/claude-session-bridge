@@ -1,0 +1,42 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: ShellCheck
+        run: shellcheck -S warning plugins/session-bridge/skills/session-bridge/scripts/*.sh install/install.sh tests/run_tests.sh
+      - name: Validate JSON manifests
+        run: |
+          for f in .claude-plugin/marketplace.json plugins/session-bridge/.claude-plugin/plugin.json examples/config/*.json; do
+            python3 -m json.tool "$f" > /dev/null && echo "ok  $f"
+          done
+      - name: Validate plugin with Claude Code
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          claude plugin validate .
+          claude plugin validate ./plugins/session-bridge
+
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bash scripts
+        shell: bash
+        run: bash tests/run_tests.sh
+      - name: PowerShell scripts
+        shell: pwsh
+        run: ./tests/run_tests.ps1

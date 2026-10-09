@@ -1,0 +1,13 @@
+# local state written by the skill
+.claude/bridge-state.json
+
+# packaging output
+dist/
+*.skill
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

@@ -1,0 +1,6 @@
+{
+  "role": "backend",
+  "peer": "frontend",
+  "transport": "git",
+  "bridge_path": "C:\\work\\ledger\\session-bridge"
+}

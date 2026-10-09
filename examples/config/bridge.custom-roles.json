@@ -1,0 +1,7 @@
+{
+  "role": "mobile",
+  "peer": "api",
+  "transport": "git",
+  "bridge_path": "/home/dev/projects/session-bridge",
+  "contract_owner": "api"
+}

@@ -1,0 +1,6 @@
+2026-10-09 15:12:41.203 [ERR] POST /api/cheques responded 500 in 18 ms
+System.FormatException: String '25/10/2026' was not recognized as a valid DateTime.
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at Ledger.Api.Cheques.ChequeCreateConverter.Read(...) in ChequeCreateConverter.cs:line 27
+   at Ledger.Api.Cheques.ChequesController.Create(ChequeCreate dto) in ChequesController.cs:line 54
+# connection string and user details removed

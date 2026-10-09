@@ -1,0 +1,32 @@
+{
+  "openapi": "3.0.1",
+  "info": { "title": "Ledger API", "version": "v1" },
+  "paths": {
+    "/api/cheques": {
+      "get": {
+        "parameters": [
+          { "name": "page", "in": "query", "schema": { "type": "integer", "default": 1 } },
+          { "name": "pageSize", "in": "query", "schema": { "type": "integer", "default": 20, "maximum": 100 } }
+        ],
+        "responses": { "200": { "description": "OK", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ChequePage" } } } } }
+      },
+      "post": {
+        "requestBody": { "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ChequeCreate" } } } },
+        "responses": { "201": { "description": "Created" }, "400": { "description": "Validation error" } }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Cheque": { "type": "object", "properties": {
+        "id": { "type": "integer" }, "number": { "type": "string" }, "amount": { "type": "number" },
+        "currencyCode": { "type": "string" }, "dueDate": { "type": "string", "format": "date" }, "status": { "type": "string" } } },
+      "ChequeCreate": { "type": "object", "required": ["number", "amount", "currencyCode", "dueDate"], "properties": {
+        "number": { "type": "string" }, "amount": { "type": "number" },
+        "currencyCode": { "type": "string" }, "dueDate": { "type": "string", "format": "date" } } },
+      "ChequePage": { "type": "object", "properties": {
+        "items": { "type": "array", "items": { "$ref": "#/components/schemas/Cheque" } },
+        "page": { "type": "integer" }, "pageSize": { "type": "integer" }, "totalCount": { "type": "integer" } } }
+    }
+  }
+}

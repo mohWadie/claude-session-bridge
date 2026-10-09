@@ -1,0 +1,6 @@
+{
+  "role": "frontend",
+  "peer": "backend",
+  "transport": "folder",
+  "bridge_path": "G:\\My Drive\\session-bridge"
+}
