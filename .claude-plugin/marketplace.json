@@ -2,13 +2,16 @@
   "name": "claude-session-bridge",
   "description": "Let two Claude Code sessions (e.g. backend and frontend) talk to each other through a shared folder or Git repo.",
   "owner": {
-    "name": "MohammedWadie"
+    "name": "MohammadWadie"
   },
   "plugins": [
     {
       "name": "session-bridge",
       "source": "./plugins/session-bridge",
-      "description": "Topic-based messaging, API contract sharing and live debugging discussions between two Claude Code sessions."
+      "description": "Topic-based messaging, API contract sharing and live debugging discussions between two Claude Code sessions.",
+      "author": {
+        "name": "MohammedWadie"
+      }
     }
   ]
 }
