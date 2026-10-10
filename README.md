@@ -50,11 +50,11 @@ problem together** while you watch.
 **As a Claude Code plugin (recommended):**
 
 ```bash
-claude plugin marketplace add YOUR_GITHUB_USERNAME/claude-session-bridge
+claude plugin marketplace add mohWadie/claude-session-bridge
 claude plugin install session-bridge@claude-session-bridge
 ```
 
-Or inside a session: `/plugin marketplace add YOUR_GITHUB_USERNAME/claude-session-bridge`.
+Or inside a session: `/plugin marketplace add mohWadie/claude-session-bridge`.
 
 > The repository and marketplace are called `claude-session-bridge`; the plugin
 > and skill inside are called `session-bridge`, because Claude Code reserves
