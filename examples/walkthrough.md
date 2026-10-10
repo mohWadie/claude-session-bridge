@@ -18,7 +18,7 @@ The finished topic folder from this walkthrough is in
 Both install the skill:
 
 ```bash
-claude plugin marketplace add YOUR_GITHUB_USERNAME/claude-session-bridge
+claude plugin marketplace add mohWadie/claude-session-bridge
 claude plugin install session-bridge@claude-session-bridge
 ```
 

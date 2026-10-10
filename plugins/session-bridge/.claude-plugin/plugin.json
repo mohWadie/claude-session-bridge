@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Topic-based messaging, API contract sharing and live debugging discussions between two Claude Code sessions, over Google Drive/OneDrive/Dropbox or a dedicated Git repo.",
   "author": {
-    "name": "YOUR_NAME"
+    "name": "MohammedWadie"
   },
-  "homepage": "https://github.com/YOUR_GITHUB_USERNAME/claude-session-bridge",
-  "repository": "https://github.com/YOUR_GITHUB_USERNAME/claude-session-bridge",
+  "homepage": "https://github.com/mohWadie/claude-session-bridge",
+  "repository": "https://github.com/mohWadie/claude-session-bridge",
   "license": "MIT",
   "keywords": ["multi-session", "backend", "frontend", "collaboration", "api-contract", "debugging", "git", "google-drive"]
 }

@@ -8,14 +8,14 @@ session each need it. There are three ways; pick whichever suits your setup.
 This repository is a Claude Code plugin marketplace. From a terminal:
 
 ```bash
-claude plugin marketplace add YOUR_GITHUB_USERNAME/claude-session-bridge
+claude plugin marketplace add mohWadie/claude-session-bridge
 claude plugin install session-bridge@claude-session-bridge
 ```
 
 Or from inside a Claude Code session:
 
 ```text
-/plugin marketplace add YOUR_GITHUB_USERNAME/claude-session-bridge
+/plugin marketplace add mohWadie/claude-session-bridge
 /plugin install session-bridge@claude-session-bridge
 ```
 
@@ -40,7 +40,7 @@ Use this if you'd rather commit the skill into the project repo so everyone who
 clones it gets it, or if you don't use plugins.
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/claude-session-bridge.git
+git clone https://github.com/mohWadie/claude-session-bridge.git
 cd claude-session-bridge
 
 # Linux / macOS / Git Bash on Windows

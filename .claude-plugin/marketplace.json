@@ -2,7 +2,7 @@
   "name": "claude-session-bridge",
   "description": "Let two Claude Code sessions (e.g. backend and frontend) talk to each other through a shared folder or Git repo.",
   "owner": {
-    "name": "YOUR_NAME"
+    "name": "MohammedWadie"
   },
   "plugins": [
     {
